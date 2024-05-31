@@ -19,7 +19,8 @@ function QRCard(){
     };
 
     return(
-        <div>
+        <div className="qr-code-generator">
+            <h1>QR Code Generator</h1>
             <input 
             type="text"
             placeholder="Enter URL"
@@ -28,7 +29,7 @@ function QRCard(){
             />
             <button onClick={generateQrCode}>Generate QR code</button>
             {qrCode && (
-                <div>
+                <div className="qr-code-display">
                     <h3>QR Code: </h3>
                     <img src={qrCode} alt="QR Code" />
                 </div>
